@@ -39,7 +39,7 @@ body {
 
 .banner .content h1 {
     font-size: 3.5em;
-    color: #dba832;
+    color: #04fc43;
     text-shadow: black 2px 2px 10px;
     margin-bottom: 10px;
 }
@@ -162,13 +162,13 @@ section {
 }
 
 .title p {
-    color: #dba832;
+    color: #04fc43;
     font-size: 1.4em;
 }
 
 /*---------------THUMBNAIL-----------------*/
 
-.circle
+.circle-heros
 {
   position: relative;
   width: 250px;
@@ -192,7 +192,7 @@ section {
   z-index: 10;
 }
 
-.circle .words
+.circle-heros .words
 {
   position: absolute;
   width: 100%;
@@ -212,7 +212,7 @@ section {
   
 }
 
-.circle .words span {
+.circle-heros .words span {
   position: absolute;
   left: 50%;
   font-size: 1.2em;
@@ -221,7 +221,73 @@ section {
 
 
 
-/*---------------SERVICES-----------------*/
+/*---------------SERVICES--------------------------------------------*/
+            /*---------------SERVICES-BACKGROUND-----------------*/
+            .fond {
+                display: flex;
+                position: absolute;
+                top: 980px;
+                left: 50%;
+                transform: translateX(-50%);
+                justify-content: center;
+                align-items: center;
+                z-index: -100;
+                }
+         
+                .loader {
+                    position: relative;
+                    width: 400px;
+                    height: 400px;
+                  
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .circle {
+                    position: absolute;
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    animation: animate-bg 3s linear infinite;
+                }
+                
+                .circle2 {
+                    width: 200px;
+                    height: 200px;
+                    animation: animate-bg 6s linear infinite;
+                }
+                
+                .circle3 {
+                    width: 100px;
+                    height: 100px;
+                    animation: animate-bg 2s linear infinite;
+                }
+                
+                @keyframes animate-bg {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                
+                .circle::before {
+                    content: "";
+                    position: absolute;
+                    top: -12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background: var(--clr);
+                    border-radius: 50%;
+                    box-shadow: 0 0 20px var(--clr),
+                    0 0 60px var(--clr);
+                    
+                }
+             /*----------------------------------------*/
 
   .services-contenus {
     display: flex;
@@ -345,7 +411,7 @@ section {
 font-size: 1.5em;
 text-align: center;
 margin-top: -5px;
-color: #dba832;
+color: #04fc43;
 }
 
   .mes-competences{
@@ -529,7 +595,7 @@ color: #dba832;
 }
 
 .white p {
-    color: #dba832;
+    color: #04fc43;
 }
 
 .realisations .content {
